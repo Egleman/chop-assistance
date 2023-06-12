@@ -1,0 +1,81 @@
+.odds {
+    padding: 55px 0px 213px 0px;
+    &__image {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+    &__title {
+        color: $white;
+        margin-bottom: 145px;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        position: relative;
+    }
+    &__card {
+        background: $gray;
+        border-radius: 8px;
+        padding: 30px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+    &__info {
+        color: $white;
+        margin-bottom: 40px;
+        max-width: 435px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        &_left {
+            text-align: left;
+            align-self: flex-start;
+        }
+        &_right {
+            text-align: right;
+            align-self: flex-end;
+        }
+    }
+    &__subtitle {
+        color: $white;
+        position: relative;
+        z-index: 1;
+        &_left {
+            text-align: left;
+            align-self: flex-start;
+        }
+        &_right {
+            text-align: right;
+            align-self: flex-end;
+        }
+    }
+}
+@media (max-width: 798px) {
+    .odds {
+        padding: 0px 0px 40px 0px;
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__image {
+            display: none;
+        }
+        &__grid {
+            grid-template-columns: 1fr;
+        }
+        &__card {
+           p.left {
+            text-align: left;
+            align-self: flex-start;
+           }
+           p.right {
+            text-align: right;
+            align-self: flex-end;
+           }
+         }
+    }
+}
