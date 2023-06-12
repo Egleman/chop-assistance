@@ -1,0 +1,141 @@
+.header {
+    background: $black;
+    border-bottom: 1px solid rgba(244, 244, 244, 0.42);
+    box-sizing: border-box;
+    padding: 20px 0px;
+    position: relative;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 55px;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    &__nav {
+        &-list {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        &-link {
+            color: #fff;
+            transition: .3s all;
+            &:hover {
+                color: $light-blue;
+            }
+            &:active {
+                color: #fff;
+            }
+        }
+    }
+    &__contacts {
+        display: flex;
+        align-items: center;
+        gap: 43px;
+        &-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+            transition: .3s all;
+            &:hover {
+                color: $light-blue;
+            }
+            &:active {
+                color: #fff;
+            }
+            svg {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+        }
+    }
+    &__burger {
+        display: none;
+    }
+}
+@media (max-width: 1230px) {
+    .header {
+        &__menu {
+            gap: 20px;
+        }
+        &__nav {
+            &-list {
+                gap: 15px;
+            }
+        }
+        &__contacts {
+            gap: 15px;
+        }
+    }
+}
+@media (max-width: 1022px) {
+    .header {
+        &__nav {
+            display: none;
+        }
+        &__contacts {
+            &-item:last-of-type {
+                display: none;
+            }
+        }
+        &__burger {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: transparent;
+            transition: .3s all;
+            svg {
+                transition: .3s all;
+                &:hover {
+                    path {
+                        transition: .3s all;
+                        stroke: $light-blue;;
+                    }
+                }
+                &:active {
+                    path {
+                        transition: .3s all;
+                        stroke: $white;
+                    }
+                }
+                &:last-of-type {
+                    display: none;
+                }
+            }
+        }
+        &__burger.active {
+            svg {
+                &:last-of-type {
+                    display: flex;
+                }
+                &:first-of-type {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 798px) {
+    .header {
+        padding: 13px 0px;
+        &__logo {
+            svg {
+                height: 34px;
+                width: 44px;
+            }
+        }
+    }
+}

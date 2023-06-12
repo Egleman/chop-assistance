@@ -1,0 +1,108 @@
+.services {
+    padding: 55px 0px;
+    &__title {
+        color: $white;
+        margin-bottom: 70px;
+        text-transform: uppercase;
+    }
+    &__subtitle {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 60px;
+        p {
+            width: 50%;
+            color: $white;
+            span {
+                color: $light-blue;
+            }
+        }
+    }
+    &__card {
+        display: flex;
+        gap: 24px;
+        padding-bottom: 100px;
+        
+        &:not(:last-of-type) {
+            border-bottom: 1px solid $white;
+            margin-bottom: 100px;
+        }
+        &-image {
+            width: 50%;
+            position: relative;
+            .base {
+                width: 100%;
+                height: 100%;
+                // height: 836px;
+                object-fit: cover;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            .helper {
+                position: absolute;
+                bottom: -50px;
+                left: 0;
+            }
+            &_right {
+                .helper {
+                    left: initial;
+                    right: 0;
+                }
+            }
+        }
+        &-description {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        &-title {
+            text-transform: uppercase;
+            color: $white;
+            margin-bottom: 20px;
+        }
+        &-subtitle {
+            margin-bottom: 20px;
+            color: $white;
+        }
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        &-option {
+            color: $white;
+            position: relative;
+            padding-left: 50px;
+            &::after {
+                content: '•';
+                position: absolute;
+                // top: 3px;
+                left: 35px;
+            }
+        }
+        &-price-block {
+            margin-top: auto;
+            background: $blue-gradient;
+            border-radius: 8px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        &-price-title {
+            color: $white;
+            margin-bottom: 20px;
+        }
+        &-price-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        &-price-summ {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            p {
+                color: $white;
+            }
+        }
+    }
+}

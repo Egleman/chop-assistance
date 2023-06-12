@@ -1,0 +1,46 @@
+.btn {
+    padding: 0;
+    border: none;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    transition: .3s all;
+    border-radius: 8px;
+    &_blue {
+        background: $light-blue;
+        color: $white;
+        &:hover {
+            background: $opacity-white;
+        }
+        &:active {
+            background: $light-blue;
+        }
+    }
+    &_blue.disabled {
+        background: $white;
+        color: $gray-no-active;
+        pointer-events: none;
+    }
+    &_white {
+        background: transparent;
+        border: 1px solid $white;
+        color: $white;
+        &:hover {
+            background: $white;
+            color: $blue;
+        }
+        &:active {
+            background: transparent;
+            color: $white;
+        }
+    }
+    &_white.disabled {
+        background: transparent;
+        border: 1px solid $gray-no-active;
+        color: $gray-no-active;
+        pointer-events: none;
+    }
+}
