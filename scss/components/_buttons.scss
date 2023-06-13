@@ -44,3 +44,30 @@
         pointer-events: none;
     }
 }
+@media (max-width: 1230px) {
+    .btn {
+        &_blue {
+            background: $light-blue;
+            color: $white;
+            &:hover {
+                background: $light-blue;
+            }
+            &:active {
+                background: $opacity-white;
+            }
+        }
+        &_white {
+            background: transparent;
+            border: 1px solid $white;
+            color: $white;
+            &:hover {
+                background: transparent;
+                color: $blue;
+            }
+            &:active {
+                background: $white;
+                color: $white;
+            }
+        }
+    }
+}

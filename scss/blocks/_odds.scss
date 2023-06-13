@@ -79,3 +79,13 @@
          }
     }
 }
+@media (max-width: 606px) {
+    .odds {
+        &__card {
+            padding: 20px;
+        }
+        &__info {
+            margin-bottom: 20px;
+        }
+    }
+}

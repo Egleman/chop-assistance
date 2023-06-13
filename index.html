@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/svg" href="/image/icons/favicon-32x32.png" />
+    <link rel="shortcut icon" type="image/svg" href="./image/icons/favicon-32x32.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="/js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+    <script src="./js/inputmask.min.js" defer></script>
+    <script src="./js/index.js" defer></script>
+    <script src="./js/script.js" defer></script>
     <title>Содействие</title>
 </head>
-
 <body>
-    <header class="header">
+    <header class="header sticky">
         <div class="container">
             <div class="header__wrapper">
                 <div class="header__menu">
-                    <a href="#" class="header__logo">
+                    <a href="#" class="header__logo" scroll>
                         <svg width="47" height="60" viewBox="0 0 47 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M20.3527 0C16.8959 0 14.0927 2.76865 14.0927 6.17826V22.9949C14.0927 23.2604 14.3119 23.4766 14.581 23.4766H19.3568C19.9067 23.4766 20.3565 23.0367 20.3565 22.4905V8.02149C20.3565 7.20607 21.0256 6.54235 21.8562 6.54235H37.5062C37.6638 6.54235 37.7946 6.41719 37.7946 6.2579C37.7946 2.80278 34.953 0 31.45 0H20.3565H20.3527ZM10.5666 9.61821C10.5666 9.48167 10.4551 9.37168 10.3167 9.37168C6.99828 9.37168 4.30663 12.0265 4.30663 15.2996V22.9077C4.30663 23.2187 4.56426 23.4728 4.87957 23.4728H9.57073C10.1206 23.4728 10.5705 23.0329 10.5705 22.4867V9.61821H10.5666ZM37.7907 19.0847C37.7907 18.5424 37.3447 18.0986 36.791 18.0986H32.5266C31.9768 18.0986 31.5269 18.5386 31.5269 19.0847V40.885C31.5269 41.4273 31.9729 41.8711 32.5266 41.8711H36.791C37.3408 41.8711 37.7907 41.4311 37.7907 40.885V19.0885V19.0847ZM47 15.6144C47 12.201 44.1968 9.43995 40.74 9.43995H24.3017C23.7519 9.43995 23.302 9.8799 23.302 10.426V14.9962C23.302 15.5386 23.748 15.9823 24.3017 15.9823H39.2442C40.0709 15.9823 40.7438 16.6422 40.7438 17.4614V42.5461C40.7438 43.3616 40.0748 44.0253 39.2442 44.0253H24.3017C23.7519 44.0253 23.302 44.4652 23.302 45.0114V49.5815C23.302 50.1239 23.748 50.5676 24.3017 50.5676H40.74C44.2007 50.5676 47 47.799 47 44.3932V15.6182V15.6144ZM24.0979 27.9102C24.0979 27.3679 23.6519 26.9241 23.0982 26.9241H0.999754C0.44989 26.9241 0 27.3641 0 27.9102V32.1163C0 32.6587 0.446044 33.1024 0.999754 33.1024H23.0982C23.648 33.1024 24.0979 32.6625 24.0979 32.1163V27.9102ZM14.0927 53.8217C14.0927 57.2351 16.8959 59.9962 20.3527 59.9962H31.4461C34.9491 59.9962 37.7907 57.1934 37.7907 53.7383C37.7907 53.5828 37.6638 53.4539 37.5023 53.4539H21.8523C21.0256 53.4539 20.3527 52.7939 20.3527 51.9747V37.646C20.3527 37.1037 19.9067 36.6599 19.3529 36.6599H14.5733C14.3042 36.6599 14.0888 36.8723 14.0888 37.1378V53.8142L14.0927 53.8217ZM4.30279 44.5107C4.30279 47.8521 7.05211 50.5638 10.4397 50.5638C10.5128 50.5638 10.5666 50.507 10.5666 50.4349V37.6877C10.5666 37.1454 10.1206 36.7016 9.56688 36.7016H4.59503C4.43737 36.7016 4.31048 36.8268 4.31048 36.9823V44.5107H4.30279Z"
@@ -28,17 +30,17 @@
                     </a>
                     <nav class="header__nav">
                         <ul class="header__nav-list">
-                            <li class="header__nav-item"><a href="#" class="header__nav-link text-1">О нас</a></li>
-                            <li class="header__nav-item"><a href="#" class="header__nav-link text-1">Услуги</a></li>
-                            <li class="header__nav-item"><a href="#" class="header__nav-link text-1">Преимущества</a>
+                            <li class="header__nav-item"><a href="#about" scroll class="header__nav-link text-1">О нас</a></li>
+                            <li class="header__nav-item"><a href="#services" scroll class="header__nav-link text-1">Услуги</a></li>
+                            <li class="header__nav-item"><a href="#odds" scroll class="header__nav-link text-1">Преимущества</a>
                             </li>
-                            <li class="header__nav-item"><a href="#" class="header__nav-link text-1">Наши клиенты</a>
+                            <li class="header__nav-item"><a href="#clients" scroll class="header__nav-link text-1">Наши клиенты</a>
                             </li>
-                            <li class="header__nav-item"><a href="#" class="header__nav-link text-1">Контакты</a></li>
+                            <li class="header__nav-item"><a href="#footer" scroll class="header__nav-link text-1">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
-                <ul class="header__contacts">
+                <ul class="header__contacts active">
                     <li class="header__contacts-item">
                         <a href="tel:79990009900" class="header__contacts-link text-1">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
@@ -85,18 +87,18 @@
     </header>
     <main class="main">
         <section class="banner">
-            <img src="/image/backgrounds/banner-bg.png" alt="banner" class="banner__background">
-            <img src="/image/icons/banner-logo.svg" alt="logo" class="banner__title">
+            <img src="./image/backgrounds/banner-bg.png" alt="banner" class="banner__background">
+            <img src="./image/icons/banner-logo.svg" alt="logo" class="banner__title">
             <button class="btn btn_blue banner__button" target="#get-consultations">Получить консультацию</button>
         </section>
         <section class="simple-block">
-            <img src="/image/backgrounds/simple-block-bg.svg" alt="" class="simple-block__background">
+            <img src="./image/backgrounds/simple-block-bg.svg" alt="" class="simple-block__background">
             <div class="container">
                 <p class="text-h3 simple-block__text">Мы предлагаем широкий спектр охранных услуг любой сложности</p>
                 <p class="text-h2 simple-block__text">С нами вы можете быть спокойны за свою безопасность!</p>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <div class="about__top">
                     <div class="about__top-left">
@@ -178,7 +180,7 @@
                 </div>
             </div>
         </section>
-        <section class="services">
+        <section class="services" id="services">
             <div class="container">
                 <p class="text-h1 services__title">Наши услуги</p>
                 <div class="services__subtitle">
@@ -493,8 +495,8 @@
                 </div>
                 <div class="services__card">
                     <div class="services__card-image">
-                        <img src="/image/services/service-1.jpg" alt="service" class="base">
-                        <img src="/image/icons/services-logo.svg" alt="service-logo" class="helper">
+                        <img src="./image/services/service-1.jpg" alt="service" class="base">
+                        <img src="./image/icons/services-logo.svg" alt="service-logo" class="helper">
                     </div>
                     <div class="services__card-description">
                         <p class="services__card-title text-h2">охрана объектов</p>
@@ -601,14 +603,14 @@
                         </div>
                     </div>
                     <div class="services__card-image services__card-image_right">
-                        <img src="/image/services/service-2.jpg" alt="service" class="base">
-                        <img src="/image/icons/services-logo.svg" alt="service-logo" class="helper">
+                        <img src="./image/services/service-2.jpg" alt="service" class="base">
+                        <img src="./image/icons/services-logo.svg" alt="service-logo" class="helper">
                     </div>
                 </div>
                 <div class="services__card">
                     <div class="services__card-image">
-                        <img src="/image/services/service-3.jpg" alt="service" class="base">
-                        <img src="/image/icons/services-logo.svg" alt="service-logo" class="helper">
+                        <img src="./image/services/service-3.jpg" alt="service" class="base">
+                        <img src="./image/icons/services-logo.svg" alt="service-logo" class="helper">
                     </div>
                     <div class="services__card-description">
                         <p class="services__card-title text-h2">Обеспечение безопасности VIP-клиентов</p>
@@ -710,14 +712,14 @@
                         </div>
                     </div>
                     <div class="services__card-image services__card-image_right">
-                        <img src="/image/services/service-4.jpg" alt="service" class="base">
-                        <img src="/image/icons/services-logo.svg" alt="service-logo" class="helper">
+                        <img src="./image/services/service-4.jpg" alt="service" class="base">
+                        <img src="./image/icons/services-logo.svg" alt="service-logo" class="helper">
                     </div>
                 </div>
                 <div class="services__card">
                     <div class="services__card-image">
-                        <img src="/image/services/service-5.jpg" alt="service" class="base">
-                        <img src="/image/icons/services-logo.svg" alt="service-logo" class="helper">
+                        <img src="./image/services/service-5.jpg" alt="service" class="base">
+                        <img src="./image/icons/services-logo.svg" alt="service-logo" class="helper">
                     </div>
                     <div class="services__card-description">
                         <p class="services__card-title text-h2">Охрана массовых мероприятий</p>
@@ -768,11 +770,11 @@
                 </div>
             </div>
         </section>
-        <section class="odds">
+        <section class="odds" id="odds">
             <div class="container">
                 <p class="text-h1 odds__title">Преимущества</p>
                 <div class="odds__grid">
-                    <img src="/image/icons/odds-logo.svg" alt="odds" class="odds__image">
+                    <img src="./image/icons/odds-logo.svg" alt="odds" class="odds__image">
                     <div class="odds__card">
                         <p class="odds__info odds__info_left text-1  left">Компания успешно работает более 15 лет на рынке</p>
                         <p class="odds__subtitle odds__subtitle_left text-h3  left">опыт работы</p>
@@ -792,8 +794,261 @@
                 </div>
             </div>
         </section>
+        <section class="clients" id="clients">
+            <div class="container">
+                <p class="clients__title text-h1">Наши клиенты</p>
+                <div class="swiper clients__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="clients__slide">
+                                <img src="./image/slider/slide-1.png" alt="slide" class="clients__slide-image">
+                                <p class="clients__slide-text text-h4">
+                                    более 100<br> частных клиентов<br>
+                                    с загородной недвижимостью
+                                </p>
+                                <img src="./image/slider/slide-1.png" alt="slide" class="clients__slide-image">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="clients__slide">
+                                <img src="./image/slider/slide-1.png" alt="slide" class="clients__slide-image">
+                                <p class="clients__slide-text text-h4">
+                                    более 100<br> частных клиентов<br>
+                                    с загородной недвижимостью
+                                </p>
+                                <img src="./image/slider/slide-1.png" alt="slide" class="clients__slide-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clients__buttons">
+                    <button class="clients__buttons-button" id="left">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 6L9 12L15 18" stroke="#F4F4F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </button>
+                    <button class="clients__buttons-button" id="right">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="#F4F4F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer" id="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__top-wrapper">
+                    <a href="#" class="footer__logo" scroll>
+                        <img src="./image/icons/footer-logo.svg" alt="logo">
+                    </a>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="#about" scroll class="footer__list-link text-1">О нас</a></li>
+                            <li class="footer__list-item"><a href="#services" scroll class="footer__list-link text-1">Услуги</a></li>
+                            <li class="footer__list-item"><a href="#odds" scroll class="footer__list-link text-1">Преимущества</a></li>
+                            <li class="footer__list-item"><a href="#clients" scroll class="footer__list-link text-1">Наши клиенты</a></li>
+                            <li class="footer__list-item"><a href="#footer" scroll class="footer__list-link text-1">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="footer__contacts">
+                        <li class="footer__contacts-item">
+                            <a href="tel:79990009900" class="footer__contacts-link text-1">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.1666 15.5098V18.2598C20.1676 18.5151 20.1153 18.7678 20.013 19.0017C19.9108 19.2356 19.7608 19.4456 19.5726 19.6181C19.3845 19.7907 19.1624 19.9221 18.9206 20.0039C18.6787 20.0857 18.4225 20.1161 18.1682 20.0931C15.3475 19.7866 12.638 18.8227 10.2574 17.2789C8.04257 15.8715 6.16479 13.9938 4.7574 11.7789C3.20821 9.38753 2.24412 6.66484 1.94323 3.83143C1.92032 3.57794 1.95045 3.32246 2.03169 3.08125C2.11293 2.84004 2.2435 2.6184 2.4151 2.43042C2.5867 2.24244 2.79555 2.09225 3.02837 1.98941C3.26119 1.88657 3.51288 1.83334 3.7674 1.8331H6.5174C6.96226 1.82872 7.39354 1.98625 7.73085 2.27633C8.06815 2.56642 8.28847 2.96926 8.35073 3.40976C8.4668 4.28982 8.68206 5.15393 8.9924 5.9856C9.11573 6.31369 9.14242 6.67027 9.06931 7.01307C8.9962 7.35587 8.82636 7.67053 8.5799 7.91976L7.41573 9.08393C8.72066 11.3788 10.6208 13.279 12.9157 14.5839L14.0799 13.4198C14.3291 13.1733 14.6438 13.0035 14.9866 12.9303C15.3294 12.8572 15.686 12.8839 16.0141 13.0073C16.8457 13.3176 17.7098 13.5329 18.5899 13.6489C19.0352 13.7117 19.4419 13.936 19.7326 14.2791C20.0233 14.6222 20.1777 15.0602 20.1666 15.5098Z" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                                +7 999 000 99 00
+                            </a>
+                        </li>
+                        <li class="footer__contacts-item">
+                            <a href="mailto:Fgjkfofjbjgfmjm@gmail.com" class="footer__contacts-link text-1">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.66659 3.66699H18.3333C19.3416 3.66699 20.1666 4.49199 20.1666 5.50033V16.5003C20.1666 17.5087 19.3416 18.3337 18.3333 18.3337H3.66659C2.65825 18.3337 1.83325 17.5087 1.83325 16.5003V5.50033C1.83325 4.49199 2.65825 3.66699 3.66659 3.66699Z" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M20.1666 5.5L10.9999 11.9167L1.83325 5.5" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                                Fgjkfofjbjgfmjm@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer__buttons">
+                        <button class="footer__buttons-button btn btn_blue text-1" target="#get-consultations">Получить консультацию</button>
+                        <button class="footer__buttons-button btn btn_white text-1" target="#invite">Пригласить в тендер</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-wrapper">
+                    <p class="text-1 footer__bottom-copy">© 2023, СОДЕЙСТВИЕ. Копирование материалов разрешено только с указанием ссылки на первоисточник</p>
+                    <a href="policy.html" class="footer__bottom-link text-1">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="hidden-menu">
+        <div class="container">
+            <nav class="hidden-menu__nav">
+                <div class="hidden-menu__list">
+                    <li class="hidden-menu__list-item"><a href="#about" scroll class="hidden-menu__list-link text-1">О нас</a></li>
+                    <li class="hidden-menu__list-item"><a href="#services" scroll class="hidden-menu__list-link text-1">Услуги</a></li>
+                    <li class="hidden-menu__list-item"><a href="#odds" scroll class="hidden-menu__list-link text-1">Преимущества</a></li>
+                    <li class="hidden-menu__list-item"><a href="#clients" scroll class="hidden-menu__list-link text-1">Наши клиенты</a></li>
+                    <li class="hidden-menu__list-item"><a href="#footer" scroll class="hidden-menu__list-link text-1">Контакты</a></li>
+                </div>
+            </nav>
+            <ul class="hidden-menu__contacts">
+                <li class="hidden-menu__contacts-item">
+                    <a href="tel:79990009900" class="hidden-menu__contacts-link text-1">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.1667 15.51V18.26C20.1677 18.5153 20.1154 18.768 20.0132 19.0019C19.9109 19.2358 19.7609 19.4458 19.5728 19.6184C19.3846 19.791 19.1625 19.9224 18.9207 20.0042C18.6789 20.0859 18.4226 20.1163 18.1684 20.0933C15.3476 19.7868 12.6381 18.823 10.2575 17.2792C8.0427 15.8718 6.16491 13.994 4.75752 11.7792C3.20833 9.38778 2.24424 6.66509 1.94335 3.83167C1.92045 3.57819 1.95057 3.3227 2.03181 3.0815C2.11305 2.84029 2.24363 2.61864 2.41522 2.43066C2.58682 2.24268 2.79567 2.09249 3.0285 1.98965C3.26132 1.88681 3.513 1.83358 3.76752 1.83334H6.51752C6.96238 1.82896 7.39366 1.9865 7.73097 2.27658C8.06827 2.56666 8.28859 2.9695 8.35085 3.41001C8.46692 4.29007 8.68218 5.15417 8.99252 5.98584C9.11585 6.31394 9.14254 6.67051 9.06943 7.01331C8.99633 7.35612 8.82648 7.67078 8.58002 7.92001L7.41585 9.08417C8.72078 11.3791 10.6209 13.2792 12.9159 14.5842L14.08 13.42C14.3293 13.1736 14.6439 13.0037 14.9867 12.9306C15.3295 12.8575 15.6861 12.8842 16.0142 13.0075C16.8459 13.3178 17.71 13.5331 18.59 13.6492C19.0353 13.712 19.442 13.9363 19.7327 14.2794C20.0234 14.6225 20.1778 15.0605 20.1667 15.51Z" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                        
+                        +7 999 000 99 00
+                    </a>
+                </li>
+                <li class="hidden-menu__contacts-item">
+                    <a href="mailto:Fgjkfofjbjgfmjm@gmail.com" class="hidden-menu__contacts-link text-1">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.66671 3.66675H18.3334C19.3417 3.66675 20.1667 4.49175 20.1667 5.50008V16.5001C20.1667 17.5084 19.3417 18.3334 18.3334 18.3334H3.66671C2.65837 18.3334 1.83337 17.5084 1.83337 16.5001V5.50008C1.83337 4.49175 2.65837 3.66675 3.66671 3.66675Z" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.1667 5.5L11 11.9167L1.83337 5.5" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                        
+                        Fgjkfofjbjgfmjm@gmail.com
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="overlay" id="get-consultations">
+        <div class="modal-dialog">
+            <button class="close" target="#get-consultations">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.4375 7.4375L26.5625 26.5625" stroke="#F4F4F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.4375 26.5625L26.5625 7.4375" stroke="#F4F4F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+            </button>
+            <p class="modal-dialog__title text-h3">Получить консультацию</p>
+            <p class="modal-dialog__subtitle text-1">Заполните ниже указанные поля, чтобы наш менеджер мог связаться с вами</p>
+            <form action="#" class="modal-dialog__form">
+                <div class="modal-dialog__form-input" requried property="name">
+                    <input type="text" placeholder="Ваше имя" property="name" textValue>
+                    <p class="text-1">Имя обязательно к заполнению</p>
+                </div>
+                <div class="modal-dialog__form-input" requried property="phone"> 
+                    <input type="tel" placeholder="Номер телефона" masked property="phone" textValue>
+                    <p class="text-1">Номер телефона обязателен к заолнению</p>
+                </div>
+                <div class="modal-dialog__form-input" requried property="email">
+                    <input type="text" placeholder="Электронная почта" property="email" textValue>
+                    <p class="text-1">Электронная почта обязательна к заолнению</p>
+                </div>
+                
+                <div class="modal-dialog__form-checkbox" requried property="checkbox">
+                    <input type="checkbox" id="checkbox-1" property="checkbox" boolValue>
+                    <label for="checkbox-1">
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.6666 1L5.49992 10.1667L1.33325 6" stroke="#F4F4F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </label>
+                    <p class="text-1">Даю согласие на <a href="policy.html">обработку персональных данных</a></p>
+                </div>
+                <button class="modal-dialog__form-button btn btn_blue text-1" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <div class="overlay" id="invite">
+        <div class="modal-dialog">
+            <button class="close" target="#invite">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.4375 7.4375L26.5625 26.5625" stroke="#F4F4F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.4375 26.5625L26.5625 7.4375" stroke="#F4F4F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+            </button>
+            <p class="modal-dialog__title text-h3">Пригласить в тендер</p>
+            <form action="#" class="modal-dialog__form">
+                <div class="modal-dialog__form-input" requried property="name">
+                    <input type="text" placeholder="Ваше имя" textValue property="name">
+                    <p class="text-1">Имя обязательно к заполнению</p>
+                </div>
+                <div class="modal-dialog__form-input" requried property="phone">
+                    <input type="tel" placeholder="Номер телефона" masked textValue property="phone">
+                    <p class="text-1">Номер телефона обязателен к заолнению</p>
+                </div>
+                <div class="modal-dialog__form-input" requried property="email">
+                    <input type="text" placeholder="Электронная почта" textValue property="email">
+                    <p class="text-1">Электронная почта обязательна к заолнению</p>
+                </div>
+                <div class="modal-dialog__form-input">
+                    <textarea type="text" placeholder="Комментарий" textValue property="comment"></textarea>
+                </div>
+                
+                <div class="modal-dialog__form-checkbox" requried property="checkbox">
+                    <input type="checkbox" id="checkbox-2" boolValue property="checkbox">
+                    <label for="checkbox-2">
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.6666 1L5.49992 10.1667L1.33325 6" stroke="#F4F4F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </label>
+                    <p class="text-1">Даю согласие на <a href="policy.html">обработку персональных данных</a></p>
+                </div>
+                <div class="modal-dialog__form-upload">
+                    <div class="select">
+                        <input type="file" id="file" multiple>
+                        <label for="file">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.2267 11.9713L13.2708 21.9272C12.0512 23.1468 10.3969 23.832 8.67207 23.832C6.94721 23.832 5.29299 23.1468 4.07332 21.9272C2.85366 20.7075 2.16846 19.0533 2.16846 17.3284C2.16846 15.6035 2.85366 13.9493 4.07332 12.7296L14.0292 2.77382C14.8423 1.96071 15.9451 1.50391 17.095 1.50391C18.2449 1.50391 19.3477 1.96071 20.1608 2.77382C20.9739 3.58693 21.4307 4.68974 21.4307 5.83965C21.4307 6.98956 20.9739 8.09237 20.1608 8.90548L10.1942 18.8613C9.7876 19.2679 9.23619 19.4963 8.66124 19.4963C8.08628 19.4963 7.53488 19.2679 7.12832 18.8613C6.72177 18.4548 6.49337 17.9034 6.49337 17.3284C6.49337 16.7534 6.72177 16.202 7.12832 15.7955L16.3258 6.60882" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="text-1">
+                                Нажмите, чтобы прикрепить техническое задание, требования, условия 
+                            </p> 
+                        </label>
+                    </div>
+                    <ul class="file-list">
+                    </ul>
+                </div>
+                <button class="modal-dialog__form-button btn btn_blue text-1" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <template id="file-template">
+        <li>
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="del-file">
+                <path d="M2.1875 2.1875L7.8125 7.8125" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2.1875 7.8125L7.8125 2.1875" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>                                
+            <svg width="33" height="40" viewBox="0 0 33 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                <g clip-path="url(#clip0_226_4235)">
+                <path d="M20.35 0.555664H4.94998C3.92889 0.555664 2.94963 0.965385 2.22761 1.69469C1.5056 2.424 1.09998 3.41316 1.09998 4.44455V35.5557C1.09998 36.5871 1.5056 37.5762 2.22761 38.3055C2.94963 39.0348 3.92889 39.4446 4.94998 39.4446H28.05C29.0711 39.4446 30.0503 39.0348 30.7723 38.3055C31.4944 37.5762 31.9 36.5871 31.9 35.5557V12.2223L20.35 0.555664Z" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.35 0.555664V12.2223H31.9" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24.2 21.9443H8.79999" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24.2 29.7227H8.79999" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.65 14.167H10.725H8.79999" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_226_4235">
+                <rect width="33" height="40" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>
+            <p class="text-1 textContent"></p>                              
+        </li>
+    </template>
+    <template id="add-file">
+        <li>
+            <svg width="33" height="40" viewBox="0 0 33 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_226_4255)">
+                <path d="M20.2684 1.31348H5.1943C4.19483 1.31348 3.23629 1.70723 2.52955 2.40813C1.82282 3.10902 1.42578 4.05964 1.42578 5.05085V34.9498C1.42578 35.9411 1.82282 36.8917 2.52955 37.5926C3.23629 38.2935 4.19483 38.6872 5.1943 38.6872H27.8054C28.8049 38.6872 29.7634 38.2935 30.4702 37.5926C31.1769 36.8917 31.5739 35.9411 31.5739 34.9498V12.5256L20.2684 1.31348Z" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.2687 1.31348V12.5256H31.5742" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.5 31.2121V20" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.8472 25.6064H22.1527" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_226_4255">
+                <rect width="33" height="40" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>                                
+        </li>
+    </template>
 </body>
-
 </html>

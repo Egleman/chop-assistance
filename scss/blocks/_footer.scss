@@ -1,0 +1,162 @@
+.footer {
+    background: $black;
+    padding: 50px 0px 40px 0px;
+    &__top {
+        padding-bottom: 30px;
+        border-bottom: 1px solid $white;
+        &-wrapper {
+            display: flex;
+        }
+    }
+    &__nav {
+        margin-left: 125px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &-link {
+            transition: .3s all;
+            color: #fff;
+            &:hover {
+                color: $light-blue;
+            }
+            &:active {
+                color: #fff;
+            }
+        }
+    }
+    &__contacts {
+        margin-left: 85px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &-link {
+            color: #fff;
+            transition: .3s all;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            &:hover {
+                color: $light-blue;
+            }
+            &:active {
+                color: #fff;
+            }
+        }
+    }
+    &__buttons {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        &-button {
+            width: 220px;
+        }
+    }
+    &__bottom {
+        padding-top: 40px;
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+
+        }
+        &-copy {
+            color: $white;
+        }
+        &-link {
+            color: $white;
+            transition: .3s all;
+            &:hover {
+                color: $light-blue;
+            }
+            &:active {
+                color: $white;
+            }
+        }
+    }
+}
+@media (max-width: 1230px) {
+    .footer {
+        &__logo {
+            img {
+                width: 200px;
+            }
+        }
+        &__nav {
+            margin-left: 50px;
+        }
+        &__list {
+            &-link {
+                color: #fff;
+                &:hover {
+                    color: #fff;
+                }
+                &:active {
+                    color: $light-blue;
+                }
+            }
+        }
+        &__contacts {
+            margin-left: 50px;
+            &-link {
+                &:hover {
+                    color: #fff;
+                }
+                &:active {
+                    color: $light-blue;
+                }
+            }
+        }
+        &__bottom {
+            &-wrapper {
+                align-items: flex-start;
+            }
+            &-link {
+                white-space: nowrap;
+            }
+        }
+    }
+}
+@media (max-width: 1022px) {
+    .footer {
+        &__logo {
+            display: none;
+        }
+        &__nav {
+            margin-left: 0;
+        }
+    }
+}
+@media (max-width: 798px) {
+    .footer {
+        &__nav {
+            display: none;
+        }
+        &__contacts {
+            margin-left: 0;
+        }
+        &__bottom {
+            &-wrapper {
+                flex-direction: column;
+            }
+        }
+    }
+}
+@media (max-width: 606px) {
+    .footer {
+        &__top {
+            &-wrapper {
+                flex-direction: column;
+            }
+        }
+        &__contacts {
+            margin-bottom: 30px;
+        }
+        &__buttons {
+            margin-left: 0;
+        }
+    }
+}

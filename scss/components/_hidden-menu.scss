@@ -1,0 +1,95 @@
+.hidden-menu {
+    position: fixed;
+    top: 101px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility 0s .5s;
+    background: $blue;
+    padding: 60px 20px;
+    min-width: 300px;
+    &__nav {
+        margin-bottom: 40px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        list-style-type: none;
+        &-link {
+            color: #fff;
+            transition: .3s all;
+            &:hover {
+                color: $light-blue;
+            }
+            &:active {
+                color: #fff;
+            }
+        }
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &-link {
+            color: #fff;
+            transition: .3s all;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            &:hover {
+                color: $light-blue;
+            }
+            &:active {
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media (max-width: 1230px) {
+    .hidden-menu {
+        &__list {
+            &-link {
+                &:hover {
+                    color: #fff;
+                }
+                &:active {
+                    color: $light-blue;
+                } 
+            }
+        }
+        &__contacts {
+            &-link {
+                &:hover {
+                    color: #fff;
+                }
+                &:active {
+                    color: $light-blue;
+                }   
+            }
+        }
+    }
+}
+
+@media (max-width: 1022px) {
+    .hidden-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .5s, visibility 0s;
+        z-index: 9;
+        border-bottom: 1px solid rgba(244, 244, 244, 0.42);
+    }
+}
+@media (max-width: 798px) {
+    .hidden-menu {
+        top: 69px;
+        bottom: 0;
+    }
+    .hidden-menu.active {
+        border-bottom: none;
+    }
+}
