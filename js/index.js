@@ -79,14 +79,3 @@ class Accordion {
 new Accordion(document.querySelector('.accordion'), {
     alwaysOpen: true
 });
-
-// Слайдер
-const swiper = new Swiper('.swiper', {
-  loop: true,
-  slidesPerView: 1,
-  speed: 1000,
-  navigation: {
-    nextEl: '#right',
-    prevEl: '#left',
-  },
-});

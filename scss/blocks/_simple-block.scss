@@ -1,6 +1,6 @@
 .simple-block {
     position: relative;
-    padding: 50px 0px;
+    padding: 80px 0px;
     background: $black;
     &__background {
         position: absolute;
@@ -13,9 +13,6 @@
         color: $white;
         text-align: center;
         text-transform: uppercase;
-        &:first-of-type {
-            margin-bottom: 30px;
-        }
     }
 }
 @media (max-width: 798px) {
@@ -28,10 +25,5 @@
 @media (max-width: 606px) {
     .simple-block {
         padding: 30px 0px;
-        &__text {
-            &:first-of-type {
-                margin-bottom: 20px;
-            }
-        }
     }
 }

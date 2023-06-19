@@ -1,3 +1,21 @@
+//Бургер кнопка
+const header_burger = document.querySelector('.header__burger');
+//Скрытое меню
+const hidden_menu = document.querySelector('.hidden-menu');
+//Блок контактов в хедере для исчезновения при открытом меню
+const header_contacts = document.querySelector('.header__contacts');
+
+// Функция проверки активности меню на мобилке
+const controlScrollHeader = () => {
+  if (header_burger.classList.contains('active')) {
+    header_burger.classList.remove('active');
+  }
+  if (hidden_menu.classList.contains('active')) {
+    hidden_menu.classList.remove('active');
+  }
+  header_contacts.classList.add('active');
+}
+
 // Плавный скролл
 document.querySelectorAll('[scroll]').forEach(link => {
   link.addEventListener('click', (e) => {
@@ -12,11 +30,13 @@ document.querySelectorAll('[scroll]').forEach(link => {
             top: offsetPosition,
             behavior: 'smooth'
         });
+        controlScrollHeader();
       } else {
         window.scrollBy({
           top: -999999999,
           behavior: 'smooth'
-      });
+        });
+        controlScrollHeader();
       }
   });
 });
@@ -169,10 +189,11 @@ const forms = () => {
   })
 }
 
-document.querySelector('.header__burger').addEventListener('click', () => {
-  document.querySelector('.header__burger').classList.toggle('active');
-  document.querySelector('.hidden-menu').classList.toggle('active');
-  document.querySelector('.header__contacts').classList.toggle('active');
+// Открытие мобильного меню
+header_burger.addEventListener('click', () => {
+  header_burger.classList.toggle('active');
+  hidden_menu.classList.toggle('active');
+  header_contacts.classList.toggle('active');
 })
 
 forms();

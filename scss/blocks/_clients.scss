@@ -3,8 +3,9 @@
     &__title {
         color: $white;
         margin-bottom: 68px;
+        text-transform: uppercase;
     }
-    &__slide {
+    &__grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
@@ -19,44 +20,6 @@
             text-transform: uppercase;
         }
     }
-    &__slider {
-        margin-bottom: 60px;
-    }
-    &__buttons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 100px;
-        &-button {
-            background: transparent;
-            border: none;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: .3s all;
-            svg {
-                transition: .3s all;
-                path {
-                    transition: .3s all;
-                }
-            }
-            &:hover {
-                svg {
-                    path {
-                        stroke: $light-blue;
-                    }
-                }
-            }
-            &:active {
-                svg {
-                    path {
-                        stroke: $white;
-                    }
-                }
-            }
-        }
-    }
 }
 @media (max-width: 798px) {
     .clients {
@@ -64,14 +27,8 @@
         &__title {
             margin-bottom: 30px;
         }
-        &__slider {
-            margin-bottom: 30px;
-        }
-        &__slide {
+        &__grid {
             grid-template-columns: 1fr;
-        }
-        &__buttons {
-            gap: 25px;
         }
     }
 }

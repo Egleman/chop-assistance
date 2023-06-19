@@ -9,7 +9,7 @@
         display: flex;
         justify-content: space-between;
         gap: 24px;
-        margin-bottom: 60px;
+        margin-bottom: 110px;
         p {
             width: 50%;
             color: $white;
@@ -158,6 +158,9 @@
                     left: 5px;
                 }
             }
+        }
+        &__subtitle {
+            margin-bottom: 60px;
         }
     }
 }
