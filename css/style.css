@@ -822,12 +822,11 @@ h4, .text-h4 {
     min-height: 360px;
     padding-top: 0;
     justify-content: center;
+    gap: 30px;
+    padding: 0px 15px;
   }
   .banner__title {
     width: 178px;
-  }
-  .banner__text {
-    display: none;
   }
 }
 .simple-block {

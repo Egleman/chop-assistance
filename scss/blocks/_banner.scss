@@ -46,11 +46,10 @@
         min-height: 360px;
         padding-top: 0;
         justify-content: center;
+        gap: 30px;
+        padding: 0px 15px;
         &__title {
             width: 178px;
-        }
-        &__text {
-            display: none;
         }
     }
 }
